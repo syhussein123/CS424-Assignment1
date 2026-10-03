@@ -134,6 +134,33 @@ We mapped these domain questions the way we did because it revealed that what we
 
 # **Task 5: Visualization Sketches**
 
+#### **Sketch #1**
+
+#### **Sketch #2**
+
+#### **Sketch #3**
+
+#### **Sketch #4: Different Transportation Types vs Commute Times**
+
+The motivation behind the sketch was to display how different commute types could vary in time, but also see if there was a way we could identify a trend by commute type. At a school like UIC are people who are using a specific mode of transportation experiencing very similar commute lengths? The attributes being represented are commute_time and transportation. Marks and visual channels that are being utilized include a line graph, where each line represents a different mode of transportation. The x axis represents the time blocks of commute lengths, and y represents the amount of people that had a commute length falling in that range. What worked well here was being able to see a visual representation of the maximum and minimum of each mode of transportation, as well as which mode of transportation is not used as often. What didn’t work so well was that using time frames instead of exact time resulted in people getting grouped up that may not have taken the same amount of time. 15 minute blocks could have major variance in between. Which resulted in confusion when trying to graph, originally I wanted to make this a scatterplot graph where each dot color represented a respondent, but that made it difficult. This sketch differs from other sketches because it allows for people to visually see the differences in transportation type.
+![Task 5 Sketch 4](Task5Sketch4.png)
+
+#### **Sketch #5: Distance of Travel vs Transportation Type**
+
+The motivation behind this graph was to figure out a way to display how we can show if there is a correlation between mode of transportation vs the distance in miles someone travels. We wanted to be able to answer the question of: Is there a preferred mode of transportation depending on mileage. Attributes being represented are transportation and mile_distance. In order to display this, I used a stacked bar graph, that way not only were we getting an aggregated value for each type, but were able to see the makeup of different modes of transportation. This worked well because the different colors allowed for you to see what mode of transportation it represented, and how many people of that color relied on that mode of transportation depending on mileage. What didn’t work well was similar to the last graph, grouping up the mileages resulted in skewed graphs in some areas. Not allowing you to be curious and try more unique plotting methods that relied on respondent_id. This graph differs from other sketches because it allows you to see any outliers based on color, as well as answering different questions such as how many people commute from a specific distance away, how many people commute by train and live 35-40 miles away, etc.
+![Task 5 Sketch 5](Task5Sketch5.png)
+
+#### **Sketch #6: Length of Commute vs Day of the Week**
+
+The motivation behind this sketch was being able to find a way to represent respondent_id in a valuable way. I wanted to be able to show individual observations, rather than grouped. The question this is aiming to answer is what day of the week do most commuters experience a skewed commute length. Is there a busier day to commute? Attributes being represented are respondent_id, day_of_week, and commute_time. The x axis represents the day of the week, and the y axis represents the commute time, and each line represents the length of an individual commute on a specific day. This worked well because it allowed us to see how different respondents varied. What didn’t work so well was that with multiple respondents, this could get confusing fast. Also the grouped times made it different to represent. This differs from other sketches because it focuses on individual respondents.
+![Task 5 Sketch 6](Task5Sketch6.png)
+
+#### **Sketch #7**
+
+#### **Sketch #8**
+
+#### **Sketch #9**
+
 # **Task 6: Summarizating**
 
 # **Task 7: Collaboration Process**
