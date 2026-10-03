@@ -103,3 +103,37 @@ The final dataset is stored in the repository as `commute_data.csv` in long form
 | mode          | Categorical | Primary mode of transportation                              | Car             |
 | distance      | Ordinal     | Distance from starting point in bucketed ranges             | 25-30 Miles     |
 | location      | Categorical | Starting city or neighborhood                               | Pilsen, Chicago |
+
+# **Task 3: Data Description and Domain Questions**
+
+# **Task 4: Task Abstractions**
+
+1. **What is the biggest indicator that there will be a longer commute time in someone’s day?**
+   - **Action:** Discover (dependency) and Compare (distributions) because we need to work through both steps, we need to see if there is a dependency occurring in commute times, as well as comparing across multiple observations
+   - **Target:** Is there a dependency between commute_time and other attributes we are collecting.
+   - **Abstract Task:** Compare the distribution of commute_time across different categories of distance, mode, and day in order to discover which attribute has the strongest relationship with longer commutes
+   - **Reasoning:** The domain question asks for a single attribute that has the largest effect on someone’s commute length. We have ordinal data that doesn’t have any notable dependent variables yet. So the real task here is to compare and then make an assumption as to what the dependency is.
+2. **Does neighborhood/distance predict transportation mode choice?**
+   - **Action:** Compare (distributions) and Discover (correlations)
+   - **Target:** Correlation and dependency between transportation and mile_distance/neighborhood.
+   - **Abstract Task:** Compare the distribution of transportation modes across distance or neighborhoods to discover whether a certain mode of transportation cluster together at certain points. - **Reasoning:** The goal here is to compare transportation mode frequency within each distance/neighborhood to visually discover a pattern.
+3. **Does weather affect transportation modes for people who walk or bike to UIC?**
+   - **Action:** Compare(distributions) and Identify (subset behavior)
+   - **Target:** The distribution of walkers and bikers across different weather conditions
+   - **Abstract Task:** Identify the subset of respondents who walk or bike occasionally and compare how often they commute under each weather condition to discover if the weather affects their mode of transportation.
+   - **Reasoning:** This question is to specifically see how weather affects people who typically walk or bike. Abstraction of this task requires us to identify the subset, and from there see any notable differences within the subset based on the weather for the day.
+4. **Is there a day when the commute takes longer compared to the rest of the week?**
+
+- **Action:** Discover(trend) and Compare(distributions)
+- **Target:** Trends across ordered categorical attributes like day_of_week in order to compare commute_time across different days
+- **Abstract Task:** Compare the distribution of commute_time across each day of the week to discover whether any single day stands out as an extreme.
+- **Reasoning:** Since our days of the week are consistent, as well as how often someone commutes to school due to set schedules, we are able to compare across the days and see how someone’s commute can differ across each day.
+
+**Reflection**
+We mapped these domain questions the way we did because it revealed that what we are trying to solve is through comparison and distribution. All of them reduce to the same action applied to different attribute pairs. But the same action can reveal different things about our data that we wouldn’t have thought about before. Our data is mainly categorical and ordinal, which reshapes the task that we need to complete. This is useful to know going into Task 5. When working with more comparisons and distribution actions, this means we should lean more towards comparison friendly designs like side by side bars and heat maps. Rather than designs that are built for correlation which our bucketed data would have difficulty supporting.
+
+# **Task 5: Visualization Sketches**
+
+# **Task 6: Summarizating**
+
+# **Task 7: Collaboration Process**
