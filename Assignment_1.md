@@ -134,11 +134,27 @@ We mapped these domain questions the way we did because it revealed that what we
 
 # **Task 5: Visualization Sketches**
 
-#### **Sketch #1**
+#### **Sketch #1: Days Where Most People Commute**
 
-#### **Sketch #2**
+The motivation behind this sketch was to create a simple, baseline visualization of how many respondents commute to campus on each day of the week. This addresses the domain question of which days see the highest and lowest campus attendance. The attributes represented are day of the week (categorical) and number of respondents (quantitative). The main visual channel is bar length/height mapped to count, with color used redundantly to distinguish each day rather than to encode additional information.
+This design worked well in the way that it is immediately readable. What did not work as well is that a bar chart can only show one attribute (count) against one categorical axis (day), so it cannot reveal anything about why attendance drops on Friday or how it relates to other variables like weather or time. Nothing about the sketch felt confusing, but the question itself is limited in scope, so this is more of a starting or reference visualization than a deep analytical one. It differs from our other sketches in that it is the most conventional chart type we used, relying on a single, well-known channel (length) rather than experimenting with less standard encodings like color intensity or curve shape.
 
-#### **Sketch #3**
+<img width="683" height="496" alt="sketch1" src="https://github.com/user-attachments/assets/c1f2133d-69d1-40a2-b904-d0065ab71b7f" />
+
+#### **Sketch #2: Commute Arrival Time and Weather Conditions**
+
+The motivation behind this sketch was to visualize what time people generally leave home depending on the weather condition that day, to explore whether bad weather (rain) causes people to leave earlier than on cloudy or sunny days. This addresses the question of whether weather conditions shift commute timing. The attributes represented are weather condition (categorical: sunny, cloudy, raining), departure time (temporal), and number of respondents (quantitative). The marks are points connected by lines, one line per weather condition, with color as the main channel distinguishing each condition and position along the x-axis and y-axis encoding time and count.
+
+This worked well for showing the overall shape of each weather condition's departure pattern and made it easy to compare peak times across conditions. What did not work as well is that with only three overlapping lines, it is still a bit visually busy at the crossover points (like 10am to 11am), and line charts like this assume a level of precision in the data that we do not really have, since our time data was collected in discrete hourly buckets rather than continuous values. One alternative we discussed but did not sketch was a box plot, with one box per weather condition summarizing the distribution of departure times (median, spread, and range) along a shared time axis. This would have traded some of the shape and pattern detail of the line chart for a much clearer, more direct answer to "do people leave earlier when it rains," since it would show at a glance whether the median departure time for rainy days sits earlier than for cloudy or sunny days. It differs from our other sketches because it is the only one focused specifically on the relationship between weather and time, rather than weather and duration, or day and attendance
+
+<img width="776" height="400" alt="sketch2" src="https://github.com/user-attachments/assets/c89ede02-c222-413f-a1f5-d46d17069da8" />
+
+#### **Sketch #3: Weather Conditions vs Commute Duration **
+
+The motivation behind this sketch was to create a visualization that uses shades of a single color as a channel to communicate density, and to find a way to combine categorical (weather) and quantitative/temporal (commute duration in minutes) data in the same view. This addresses the question of whether weather conditions impact how long people's commutes take, and how many people fall into each weather/duration combination. The attributes represented are weather condition, commute duration (in bucketed time ranges), and count of respondents. The marks are grid cells, with color saturation as the main visual channel encoding count. Darker cells indicate more respondents in that weather/duration combination.
+This worked well because it let us represent three variables at once (two categorical or ordinal axes plus one quantitative value) in a compact grid, and it made a clear pattern jump out immediately: rainy commutes cluster heavily at 60 to 75 minutes, noticeably longer than cloudy or sunny commutes. What did not work as well, or felt limited, is that the shading in the hand-drawn version was eyeballed rather than tied to an actual color scale, so it is hard to judge exact values just from color alone without reading the numbers in each cell. A proper legend would fix this. It differs from our other sketches because it is the only one relying on color intensity rather than position or length as the primary channel, and it is the only one that layers three attributes into a single compact view instead of comparing along one or two axes.
+
+<img width="705" height="325" alt="sketch 3" src="https://github.com/user-attachments/assets/89f49e4d-abda-4651-b83e-f7791ba9b3fd" />
 
 #### **Sketch #4: Different Transportation Types vs Commute Times**
 
