@@ -164,3 +164,24 @@ The motivation behind this sketch was being able to find a way to represent resp
 # **Task 6: Summarizating**
 
 # **Task 7: Collaboration Process**
+
+**How you communicated (e.g., in-person meetings, online chats, video calls).**
+Our group communicated through online chat as well as in person meetings whenever possible.
+
+**How you divided the data collection.**
+We divided our data collection by sending the google form to different group pages we were part of. This included organization group chats, friends, as well as piazza class pages.
+
+**How you made sure that different group members collected observations consistently.**
+We made sure each group member collected observations consistently by checking in with one another about the data we have collected. We worked together to observe a network of people on different days and times in order to gain as many observations as we could.
+
+**How you shared sketches and artifacts (e.g., scanned images, photos, GitHub uploads, shared drives).**
+We individually drafted our 3 sketches and ideas and from there uploaded it to our shared google drive folder. From there we met up the following day after our internal deadline in order to compare and discuss the sketches we came up with to land on two sketches we wanted to elaborate more on.
+
+**How you divided or rotated tasks (e.g., brainstorming together, each sketching different versions, reviewing and iterating).**
+We rotated tasks by splitting workload evenly. Tasks like 2 and 5 required us individually creating sketches and collecting data. Where other tasks required more write ups. As a group, we worked together to evenly distribute tasks as we were all on the same page prior to the write up. From there we reviewed each other's work, edited, and brainstormed together in order to get to our final submission.
+
+**What worked well in your collaboration, and what challenges you encountered.**
+Our group worked well together, we were very communicative with one another and were able to rely on each other to complete the work, but also for any questions anyone would have. A challenge we encountered was when we would all be confused about a certain subtask, we would work together in order to figure it out and escalate when needed.
+
+**How did the group process shape both the data collection and the visualization design?**
+The group process shaped both the data collection and visualization design because we were able to work collaboratively in order to build off of individual ideas we had for the assignment. Together we were able to create a dataset that took into account all of our ideas, as well as visualizations to represent them.
