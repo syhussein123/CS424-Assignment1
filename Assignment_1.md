@@ -43,27 +43,27 @@ What attributes will you record for each observation? Attributes that will be re
 
 Before collecting the complete dataset, we conducted a small pilot with approximately 10 observations to test the structure of our Google Form, our variable definitions, and whether the instructions were clear. We distributed the initial form to a few classmates and reviewed the responses together as a group.
 
-## Attribute Clarity and Ease of Recording
+### Attribute Clarity and Ease of Recording
 
 Yes. Respondents were able to select their commute time, weather condition, duration, and mode of transportation without confusion. The grid format we used in our Google Form made it easy for respondents to report an entire week of commutes in one submission, rather than filling out the form five separate times.
 
-## Handling Ambiguous Observations
+### Handling Ambiguous Observations
 
 The main difficulty was handling days when respondents do not commute to campus. It was unclear whether they should leave the row blank, select "N/A," or skip it entirely. We added an "N/A" option to every question for each day, which resolved most of the confusion. However, we noticed that some respondents still selected a mode of transportation (like "Other") on days they marked "N/A" for time and duration. This told us that respondents do not always interpret "N/A" consistently across all questions, and we flagged it as a data cleaning issue to address later.
 
-## Consistency Across Group Members
+### Consistency Across Group Members
 
 The attributes and categories were straightforward, and both group members interpreted them the same way. We agreed on definitions before distributing the form to avoid inconsistency.
 
-## Missing Attributes
+### Missing Attributes
 
 During the pilot, we realized we had not asked respondents where they were commuting from. Without a location attribute, we could not do any spatial analysis or compare suburbs versus city commuters. We added a location question after the pilot, asking respondents for their starting city or neighborhood. Because the earliest pilot responses did not include location, those rows have missing location data. We documented this as a known limitation of the dataset.
 
-## Unnecessary Attributes
+### Unnecessary Attributes
 
 Every attribute we collected maps to at least one domain question we want to investigate. We considered dropping the weather question at one point because it added complexity to the form, but we kept it because it enables comparisons between conditions (rain vs. sun) that are central to our project.
 
-## Impact on Domain Questions
+### Impact on Domain Questions
 
 The pilot revealed two important limitations that changed how we approached our domain questions:
 
@@ -71,7 +71,7 @@ The pilot revealed two important limitations that changed how we approached our 
 
 **Bucketed instead of numeric values.** We collected distance and duration as ranges (e.g., 15–30 minutes, 6–8 miles) rather than exact numbers. This means we cannot calculate precise averages or make true scatter plots. We can still compare groups and identify patterns, but our analysis is limited to ordinal comparisons rather than continuous correlations. We documented this as a tradeoff: bucketed data is easier for respondents to report quickly and accurately, but it limits the types of visualizations we can create.
 
-## Revisions Made After the Pilot
+### Revisions Made After the Pilot
 
 Based on what we learned, we made the following changes before the full collection:
 
@@ -79,7 +79,7 @@ Based on what we learned, we made the following changes before the full collecti
 - Clarified instructions for the N/A option so respondents understood it applies across all questions for that day
 - Accepted that bucketed distance and duration would limit us to ordinal comparisons and planned our domain questions accordingly
 
-## Full Data Collection
+### Full Data Collection
 
 After revising the form, we distributed it through club Discord servers and to classmates. The form remained open for two weeks, so we can have two weeks of data to compare variables like weather. Each respondent reported their commute for all five weekdays in a single submission.
 
@@ -87,7 +87,7 @@ We collected 51 responses, giving us approximately 230 total observations (51 re
 
 The data was collected anonymously. No names, faces, license plates, or other personally identifiable information were recorded.
 
-## Dataset and Data Dictionary
+### Dataset and Data Dictionary
 
 The final dataset is stored in the repository as `commute_data.csv` in long format, with one row per respondent per day.
 
@@ -161,7 +161,37 @@ The motivation behind this sketch was being able to find a way to represent resp
 
 #### **Sketch #9**
 
-# **Task 6: Summarizating**
+# **Task 6: Summarizing**
+
+Each of us tried to make as many different visualization designs as possible: bar graphs, time plots, heat maps, group charts, etc. We learned different ways to represent our ideas, and making visualizations for specific questions made us realize that there are multiple correct ways to present the data, but we need to pick the best ones. We had to compare the strengths and weaknesses of each design for all 9 visualizations we made for task 5, and maybe try out a few different ones for the same question so that we can see which one best represents what we are trying to represent.
+
+### Design Directions We Explored and What We Learned 
+
+As we sketched, our perspective on the questions shifted a little bit. For example, there were questions where we had to use a few different attributes, so we were struggling in the beginning with a good way to present all of them. We noticed that some relationships are harder to present compared to others, and it might not be possible to answer the question using the visualization that we first wanted, so we had to shift our way of thinking. For example, we wanted to show the relationship between starting location and transportation type. We first wanted to create a stacked bar graph, but ended up making a grouped chart since we believed that’s a better way to group different neighborhoods, the number of people from each neighborhood that use specific transportation, and each transportation type in different colors.
+
+We tried to explore a range of visualizations but we were somewhat limited due to the data types collected. Since most of our attributes are categorical or bucketed rather than continuous, we ended up using a small subset of bar charts, line charts, and heatmaps. Even within this subset, we used each one in a few different configurations, which helped us refine our ideas into stronger sketches. 
+
+### How the Sketches Address Our Domain Questions
+
+Each of our sketches explores a different combination of attributes, which lets us approach our domain questions from different angles. The bar chart gives us a baseline for attendance by day, which somewhat answers our question of if there's a worst day to commute. The weather versus departure time sketch and the weather versus duration heatmap address our domain questions of long commute time indicators and weather affecting transportation. The grouped chart by location starts to address our question of neighborhood and distance by comparing distance and mode of transport. Together, the sketches move from simple counts to more specific interactions, so the diversity is not just in chart type but in which attributes each sketch pairs together.
+
+### How Data Collection Shaped our Designs 
+
+We had to find ways to visualize the indications our data could actually support, rather than the interactions we originally imagined. Because duration and distance were bucketed rather than exact, we ruled out scatterplots and precise averages and leaned toward bar and heatmap designs. Because weather was self-reported per respondent per day, we noticed that different people reported different weather for the same day, which made us question how clean that variable was. Starting location was free text, so that sketch 
+
+### What We Would Collect Differently
+
+We wish duration and distance had been collected as exact numbers or at least narrower bins, since wide buckets limited us to ordinal comparisons and ruled out scatterplots and true averages. We also wish the starting location had been a dropdown instead of free text, since cleaning inconsistent entries added friction. Finally, a single shared weather value per day from an actual weather source might have made the weather sketches more reliable than self-reported weather.
+
+### What Felt Generative and What Felt Repetitive 
+
+Our sketches cover several ranges and interactions in the data. The most generative moments came from changing which attribute pair we focused on, not just changing chart type. Moving from weather versus departure time to weather versus duration opened up the heatmap idea and surfaced a pattern we had not seen in the line chart.
+
+What felt repetitive was reaching for line charts multiple times across different questions. They are useful for comparing trends, but after the second or third version they stopped teaching us anything new about the design space itself. 
+
+### Overall Comparison
+
+The bar chart is the most readable but the least expressive. The line charts are good for trends but assume more precision than our bucketed time data really has. The heatmaps are the most expressive because they layer three attributes at once, but they depend on a clear legend and consistent data to be readable. The grouped bar chart is the best fit for comparing modes across neighborhoods, but it scales poorly if we add more categories/neighborhoods, and may work better as a spatial map.
 
 # **Task 7: Collaboration Process**
 
