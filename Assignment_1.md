@@ -1,4 +1,43 @@
-# **Task 1 Observation and Data Collection Plan** 
+# **Task 1 Observation and Data Collection Plan**
+
+For our assignment, we wanted to observe different variables that could impact commute times to UIC. We wanted to observe this because UIC is a big commuter school with students coming from all different types of neighborhoods. We have people coming from close by in Little Italy and Pilsen, and then people coming from further neighborhoods like Algonquin and Gurnee. We find this interesting because there could be a variety of factors that could influence how someone’s commute can go. The distance can decide the mode of transportation, the weather can decide the traffic, the day can influence if they even commute to campus or not. Four initial domain questions that we propose that would help us investigate and guide data collection are:
+
+- What is the biggest indicator that there will be longer commute times in someone’s day?
+- Does neighborhood/distance predict transportation mode choice?
+- Does weather affect transportation modes unequally?
+- Is there a “worse day to commute”?
+
+### Proposed Data Collection Process:
+
+**What constitutes one observation?** One observation will be constituted by the commute of a single individual on one day of the week.
+What attributes will you record for each observation? Attributes that will be recorded for each observation will be mode of transportation, arrival time, mileage, length of commute, weather at time of observation and city they are commuting from.
+
+**Where and when will you collect the data?** We collected data via an anonymous google form over the course of multiple days.
+
+**Over how many locations, times, or days will you collect it?** Data is collected from various locations, as students commute from different locations. Students also arrive at different times to school due to their schedule, we decided on hour intervals from 7am to 2pm. Collection days are Monday through Friday during the week of 9/14-9/18.
+
+**How will you ensure that your data captures meaningful variation rather than a single snapshot?** Our data will capture meaningful variation because of the different attributes being taken into account. When people are coming in at different times and from different locations, the weather isn’t the same. Especially in Chicago, it can be raining one second, and sunny the next. That mixed in with the variability of user location results in very different observations.
+
+**How will you decide what to observe?** We decided on what to observe based on factors that we take in when commuting to school. We also decided based on variables that are known for typically causing delays to see what differences in commute times it causes based on neighborhood and mileage.
+
+**How will the collection be divided among group members?** Everyone in the group will be responsible for sharing the google form with people they know, organizations they are a part of, courses they are in via piazza, etc. Everyone in the group will be responsible for ensuring that we are collecting meaningful data.
+
+**What might your collection process fail to capture?** Our collection process may fail to capture what the cause of the delay could be if there are multiple variables changing. It also may fail to capture reasoning with people commuting shorter distances, as delays don’t tend to be as drastic in those cases.
+
+**How might your collection process introduce bias?** Our collection process may introduce bias through distribution bias, sharing only with people in our network could result in oversampling students with similar variables. It also could result in self reporting bais where people are guessing their time rather than measuring it.
+
+### Initial Data Table:
+
+| Attribute         | Type         | Description                                                                           | Example                                                           |
+| ----------------- | ------------ | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| respondent_id     | categorical  | an anonymous identifier to determine which days of the week belong to which responder | R1 R2 R3                                                          |
+| day_of_week       | categorical  | which day of the week does their response correlate to                                | monday, tuesday, wednesday, thursday, friday                      |
+| transportation    | categorical  | what mode of transportation did they use for their entry                              | car, carpool, train, etc                                          |
+| arrival_window    | quantitative | what time they arrived to campus that day                                             | 8am, 9am, 10am, 11am, etc                                         |
+| mile_distance     | quantitative | range of how many miles they are commuting                                            | 1-2, 2-3, etc                                                     |
+| commute_time      | quantitative | range of how much time it took them to get to campus in minutes                       | 0-15, 15-30, 30-45, 45-60                                         |
+| weather           | categorical  | what the weather was at the time of their commute                                     | sunny, cloudy, raining, snowing, etc.                             |
+| city/neighborhood | categorical  | what area of illinois is the respondent commuting from                                | little italy, pilsen, belmont cragin, schaumburg, naperville, etc |
 
 # **Task 2: Pilot and Data Collection**
 
@@ -54,13 +93,13 @@ The final dataset is stored in the repository as `commute_data.csv` in long form
 
 ### Data Dictionary
 
-| Attribute | Type | Description | Example |
-|---|---|---|---|
-| respondent_id | Categorical | Unique identifier for each respondent (from form timestamp) | R001 |
-| day | Categorical | Day of the week | Monday |
-| time | Categorical | Hour of commute | 11am |
-| weather | Categorical | Weather condition during commute | Cloudy |
-| duration | Ordinal | Commute duration in bucketed ranges | 45-60 Minutes |
-| mode | Categorical | Primary mode of transportation | Car |
-| distance | Ordinal | Distance from starting point in bucketed ranges | 25-30 Miles |
-| location | Categorical | Starting city or neighborhood | Pilsen, Chicago |
+| Attribute     | Type        | Description                                                 | Example         |
+| ------------- | ----------- | ----------------------------------------------------------- | --------------- |
+| respondent_id | Categorical | Unique identifier for each respondent (from form timestamp) | R001            |
+| day           | Categorical | Day of the week                                             | Monday          |
+| time          | Categorical | Hour of commute                                             | 11am            |
+| weather       | Categorical | Weather condition during commute                            | Cloudy          |
+| duration      | Ordinal     | Commute duration in bucketed ranges                         | 45-60 Minutes   |
+| mode          | Categorical | Primary mode of transportation                              | Car             |
+| distance      | Ordinal     | Distance from starting point in bucketed ranges             | 25-30 Miles     |
+| location      | Categorical | Starting city or neighborhood                               | Pilsen, Chicago |
