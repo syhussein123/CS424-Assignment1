@@ -198,6 +198,16 @@ The sketch is using a heat map to show the relationship between transportation t
 The sketch is trying to show the relationship between starting location and their transportation method. The group chart is being used to represent different ways of transportation in different colors(walking, bus, train…) and for each starting location we can easily see the main type of transportation, how many people are using which transportation, and which transportation is most common depending on the specific starting point. Attributes are number of people, transportation, and city/neighborhood. Attributes are day of the week, number of people, and time. Marks: lines for each day Mon-Fri. Channels: vertical and horizontal position, color. This Graph is different from the previous because it is using groups to show the relationships all at once. One thing I noticed while drawing this graph is that our form asked people what their starting point was as a free response and not a multiple-choice question, so it was confusing to me how to represent these locations on the graph. I came to the conclusion that we will need to find a way to group these locations and check the data for the same locations that were written in a different way(example: Chicago(city) and City: Chicago)
 <img width="597" height="319" alt="task5question9" src="https://github.com/user-attachments/assets/89a455d1-9dd2-431b-ad2f-3902d102807e" />
 
+# **Refined Task 5: Final Visualization Sketches**
+**Weather condition vs commute time heat map**
+- Based on this visualization, we expect someone to understand whether weather conditions impact how long people's commutes take, how many people fall into each weather/duration combination, and to get answers to the following questions:
+- Questions: Does weather impact commute time? Which duration range is most common for each weather condition? In what time range do most people fall based on the weather?
+- Marks: square areas
+- Visual channels: horizontal and vertical position, color
+- The attributes being represented are weather conditions, commute time, and the number of people commuting within different time ranges depending on weather. 
+<img width="433" height="330" alt="refined sketch 4" src="https://github.com/user-attachments/assets/6aa54d9e-0892-4d51-be63-4660fa7e45ae" />
+
+
 # **Task 6: Summarizing**
 
 Each of us tried to make as many different visualization designs as possible: bar graphs, time plots, heat maps, group charts, etc. We learned different ways to represent our ideas, and making visualizations for specific questions made us realize that there are multiple correct ways to present the data, but we need to pick the best ones. We had to compare the strengths and weaknesses of each design for all 9 visualizations we made for task 5, and maybe try out a few different ones for the same question so that we can see which one best represents what we are trying to represent.
