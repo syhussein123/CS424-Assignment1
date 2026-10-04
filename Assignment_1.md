@@ -187,11 +187,16 @@ The motivation behind this sketch was being able to find a way to represent resp
 
 #### **Sketch #7**
 The sketch is trying to show how many people arrive at a specific time on a given day and which time of the day is the busiest. It uses attributes: day_of_week, number of people, and time. Marks: lines for each day, Mon-Fri. Channels: vertical and horizontal position, color. The line graph seems like a good choice to represent the relationship between the number of people and the time they arrive, and different colors make it easy to distinguish different days of the week and easily compare them all at once. The thing that didn’t work so well is that there might be days and times that overlap, so it will be difficult to see everything, and what felt limited is the fact that a lot of people are not commuting on Fridays, so the line for Friday looks pretty different from the others, and we don’t have much data on it.
+<img width="590" height="273" alt="task5question7" src="https://github.com/user-attachments/assets/c0d33505-d021-4d37-9e2e-aa1d2dd21802" />
+<img width="592" height="295" alt="task5question8" src="https://github.com/user-attachments/assets/c41bf478-4918-4a30-8685-1008bfa801ac" />
 
 #### **Sketch #8**
+![Uploading task5question8.png…]()
 
 
 #### **Sketch #9**
+<img width="597" height="319" alt="task5question9" src="https://github.com/user-attachments/assets/89a455d1-9dd2-431b-ad2f-3902d102807e" />
+
 
 # **Task 6: Summarizing**
 
