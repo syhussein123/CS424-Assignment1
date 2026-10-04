@@ -205,7 +205,19 @@ The sketch is trying to show the relationship between starting location and thei
 - Marks: square areas
 - Visual channels: horizontal and vertical position, color
 - The attributes being represented are weather conditions, commute time, and the number of people commuting within different time ranges depending on weather. 
-<img width="433" height="330" alt="refined sketch 4" src="https://github.com/user-attachments/assets/6aa54d9e-0892-4d51-be63-4660fa7e45ae" />
+<img width="661" height="361" alt="refined sketch 3" src="https://github.com/user-attachments/assets/4cffa503-3822-4970-901a-ea2d2d1bf4c0" />
+
+
+**Different commute types vs time**
+- Originally, we expected someone to understand how different commute types could vary in time, but also see if there was a way we could identify a trend by commute type and get the answer to our domain questions. We switched to percentages after our first draft, because plotting raw counts made Train and Car’s curves dominate the chart simply due to having more observations, not due to longer travel time. Normalizing lets us compare the timing pattern of each mode on equal levels regardless of how many people used it.
+- Questions we aimed to answer: Do people who use the train or bus on average have a greater commute time than the people who walk/drive? Which transportation type corresponds to the longest commute time? What is the most/least popular type of transportation (how does it connect to the commute time)? Is there a visible progression in commute duration as you move from walking to riding transit?
+- This visualization shows a clear staircase pattern with walkers peaking earlier at 0-15 minutes, bus riders peaking at 15-30, and so on with the rest of our lines. Bike and Carpool are shown as single dots because each had a very small sample of observations, and connecting one data point would imply a trend that isn’t accurate. 
+- Marks: points and lines
+- Channels: horizontal axis for time and vertical axis for percentage of riders. Along with color to represent mode of transportation
+- The attributes being represented are commute_time and transportation. As well as the normalized number of riders for each time bucket. 
+
+<img width="433" height="330" alt="refined sketch 4" src="https://github.com/user-attachments/assets/3cf03fd5-a762-41b8-8795-83441335195d" />
+
 
 
 # **Task 6: Summarizing**
