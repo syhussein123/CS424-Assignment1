@@ -107,16 +107,16 @@ The final dataset is stored in the repository as `commute_data.csv` in long form
 # **Task 3: Data Description and Domain Questions**
 So far, we have 52 people who responded to our Google Form. Each person answered questions about every day of the week, so we should have around 260 rows in total (so one row is one person for one specific day). We took into account people who don’t commute on certain days, so our final number of rows will be less after removing those days for certain people. Our attributes are respondent_id, day_of_week, transportation, arrival_window, mile_distance, commute_time, weather, city/neighborhood. The data was collected by making a Google Form that we sent out to students at UIC. The students were people we know, and we also asked them to send it to anyone they know. We had different questions such as: which days this person commutes to campus, how the weather conditions were on each day, how long the commute was in minutes, the primary mode of transportation, the distance from the starting point, and the name of the current neighborhood. In terms of variations, we noticed the change of weather for different days, which also potentially changes the commute time on specific days. There were things that were difficult to record, such as if the weather changes throughout the day while the person was commuting or if a person was using multiple forms of transportation, since they could only pick one of them. Potential biases might come from the fact that the form was completed by people known to us, who are mostly people in Engineering and specifically CS majors, so it is possible that our arrival at UIC might be similar because of our schedules. There was some information that’s potentially lost based on the way we created a Google Form, for example, we don’t know the exact time someone arrived on campus (if they arrived at 8:15 or 8:45) since we gave rough estimates at 7 am, 8 am, 9 am, etc. Additionally, it might be possible that some people don’t remember exactly whether it was cloudy or rainy on a specific day, and therefore the weather data might be inconsistent. Our Google response sheet was storing the data in the tables where each person is one row, and all the information for that person is stored in a column. We decided to make our dataset in the long format, which is easier to read, and each row will represent one person and their responses for one specific day. Our domain questions are: 
 
-1)What is the biggest indicator that there will be longer commute times in someone’s day? 
+**1)What is the biggest indicator that there will be longer commute times in someone’s day?**
 This question is a great connection to our data and attributes like mile_distance, transportation, day_of_week, and commute_time. It helps us go in a few different directions depending on what we want to focus on, but we can also combine everything to create one detailed visualization.
 
-2) Does neighborhood/distance predict transportation mode choice? 
+**2)Does neighborhood/distance predict transportation mode choice?**
 This connects to our attributes mile_distance, city/neighborhood, and transportation. From our data, we can see specific patterns of transportation and when people are most likely to use a specific transportation mode
-3)Does weather affect transportation modes for people who walk or bike to UIC?
 
+**3)Does weather affect transportation modes for people who walk or bike to UIC?**
 We changed this question from task 1(Does weather affect transportation modes unequally?) to make it more specific. After looking at the data, we concluded that it won’t be useful to look at people who travel by car or train on the days when it’s raining, since those probably won’t change. It connects to our attributes: transportation, respondent_id, weather, and day_of_week.
 
-4)Is there a day when the commute takes longer compared to the rest of the week?
+**4)Is there a day when the commute takes longer compared to the rest of the week?**
 We also revised this question a little bit from task 1(Is there a “worse day to commute”?). The question from task 1 was pretty broad and unclear, and we wanted to explain what “worse” means. It connects to our attributes:commute_time, arrival window, and day_of_week.
 
 
@@ -186,8 +186,10 @@ The motivation behind this sketch was being able to find a way to represent resp
 ![Task 5 Sketch 6](Task5Sketch6.png)
 
 #### **Sketch #7**
+The sketch is trying to show how many people arrive at a specific time on a given day and which time of the day is the busiest. It uses attributes: day_of_week, number of people, and time. Marks: lines for each day, Mon-Fri. Channels: vertical and horizontal position, color. The line graph seems like a good choice to represent the relationship between the number of people and the time they arrive, and different colors make it easy to distinguish different days of the week and easily compare them all at once. The thing that didn’t work so well is that there might be days and times that overlap, so it will be difficult to see everything, and what felt limited is the fact that a lot of people are not commuting on Fridays, so the line for Friday looks pretty different from the others, and we don’t have much data on it.
 
 #### **Sketch #8**
+
 
 #### **Sketch #9**
 
