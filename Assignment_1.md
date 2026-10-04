@@ -163,7 +163,7 @@ This worked well for showing the overall shape of each weather condition's depar
 
 <img width="776" height="400" alt="sketch2" src="https://github.com/user-attachments/assets/c89ede02-c222-413f-a1f5-d46d17069da8" />
 
-#### **Sketch #3: Weather Conditions vs Commute Duration **
+#### **Sketch #3: Weather Conditions vs Commute Duration**
 
 The motivation behind this sketch was to create a visualization that uses shades of a single color as a channel to communicate density, and to find a way to combine categorical (weather) and quantitative/temporal (commute duration in minutes) data in the same view. This addresses the question of whether weather conditions impact how long people's commutes take, and how many people fall into each weather/duration combination. The attributes represented are weather condition, commute duration (in bucketed time ranges), and count of respondents. The marks are grid cells, with color saturation as the main visual channel encoding count. Darker cells indicate more respondents in that weather/duration combination.
 This worked well because it let us represent three variables at once (two categorical or ordinal axes plus one quantitative value) in a compact grid, and it made a clear pattern jump out immediately: rainy commutes cluster heavily at 60 to 75 minutes, noticeably longer than cloudy or sunny commutes. What did not work as well, or felt limited, is that the shading in the hand-drawn version was eyeballed rather than tied to an actual color scale, so it is hard to judge exact values just from color alone without reading the numbers in each cell. A proper legend would fix this. It differs from our other sketches because it is the only one relying on color intensity rather than position or length as the primary channel, and it is the only one that layers three attributes into a single compact view instead of comparing along one or two axes.
@@ -185,7 +185,7 @@ The motivation behind this graph was to figure out a way to display how we can s
 The motivation behind this sketch was being able to find a way to represent respondent_id in a valuable way. I wanted to be able to show individual observations, rather than grouped. The question this is aiming to answer is what day of the week do most commuters experience a skewed commute length. Is there a busier day to commute? Attributes being represented are respondent_id, day_of_week, and commute_time. The x axis represents the day of the week, and the y axis represents the commute time, and each line represents the length of an individual commute on a specific day. This worked well because it allowed us to see how different respondents varied. What didn’t work so well was that with multiple respondents, this could get confusing fast. Also the grouped times made it different to represent. This differs from other sketches because it focuses on individual respondents.
 ![Task 5 Sketch 6](Task5Sketch6.png)
 
-#### **Sketch #7L Arrival time vs day of the week
+#### **Sketch #7L Arrival time vs day of the week**
 The sketch is trying to show how many people arrive at a specific time on a given day and which time of the day is the busiest. It uses attributes: day_of_week, number of people, and time. Marks: lines for each day, Mon-Fri. Channels: vertical and horizontal position, color. The line graph seems like a good choice to represent the relationship between the number of people and the time they arrive, and different colors make it easy to distinguish different days of the week and easily compare them all at once. The thing that didn’t work so well is that there might be days and times that overlap, so it will be difficult to see everything, and what felt limited is the fact that a lot of people are not commuting on Fridays, so the line for Friday looks pretty different from the others, and we don’t have much data on it.
 <img width="590" height="273" alt="task5question7" src="https://github.com/user-attachments/assets/c0d33505-d021-4d37-9e2e-aa1d2dd21802" />
 
@@ -217,7 +217,6 @@ The sketch is trying to show the relationship between starting location and thei
 - The attributes being represented are commute_time and transportation. As well as the normalized number of riders for each time bucket. 
 
 <img width="433" height="330" alt="refined sketch 4" src="https://github.com/user-attachments/assets/3cf03fd5-a762-41b8-8795-83441335195d" />
-
 
 
 # **Task 6: Summarizing**
