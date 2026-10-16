@@ -1,21 +1,21 @@
 respondent_id,date,day_of_week,depart_time,arrival_time,duration_minutes,distance_miles,mode_of_transportation,weather,location,location_clean,location_region,is_rainy,near_uic,duration_bucket
-R1,2026-10-15,Thursday,07:33:00,08:55:00,82,27.0,Car (alone),Cloudy,Carol Stream,Carol Stream,Suburb,False,False,75-90
+R1,2026-10-15,Thursday,07:33:00,08:55:00,82,27.0,Car,Cloudy,Carol Stream,Carol Stream,Suburb,False,False,75-90
 R2,2026-10-08,Thursday,11:15:00,13:30:00,135,41.0,Train,Sunny,Algonquin,Algonquin,Suburb,False,False,90+
-R3,2026-10-13,Tuesday,08:30:00,09:45:00,75,13.0,Car (alone),Sunny,Belmont Cragin,Belmont Cragin,Chicago,False,False,75-90
-R4,2026-10-15,Thursday,09:30:00,10:05:00,35,13.0,Car (alone),Cloudy,Belmont Cragin,Belmont Cragin,Chicago,False,False,30-45
-R5,2026-10-12,Monday,07:00:00,07:45:00,45,16.0,Car (alone),Sunny,Franklin Park,Franklin Park,Suburb,False,False,45-60
+R3,2026-10-13,Tuesday,08:30:00,09:45:00,75,13.0,Car,Sunny,Belmont Cragin,Belmont Cragin,Chicago,False,False,75-90
+R4,2026-10-15,Thursday,09:30:00,10:05:00,35,13.0,Car,Cloudy,Belmont Cragin,Belmont Cragin,Chicago,False,False,30-45
+R5,2026-10-12,Monday,07:00:00,07:45:00,45,16.0,Car,Sunny,Franklin Park,Franklin Park,Suburb,False,False,45-60
 R6,2026-10-12,Monday,07:30:00,08:40:00,70,13.0,Train,Cloudy,Belmont Cragin,Belmont Cragin,Chicago,False,False,60-75
 R7,2026-10-14,Wednesday,10:00:00,11:00:00,60,16.0,Train,Raining,Franklin Park,Franklin Park,Suburb,True,False,60-75
-R8,2026-10-15,Thursday,06:30:00,07:50:00,80,13.0,Train,Clear,Oak Lawn,Oak Lawn,Suburb,False,False,75-90
-R9,2026-10-14,Wednesday,08:20:00,09:06:00,46,27.0,Car (alone),Sunny,Elmhurst,Elmhurst,Suburb,False,False,45-60
+R8,2026-10-15,Thursday,06:30:00,07:50:00,80,13.0,Train,Sunny,Oak Lawn,Oak Lawn,Suburb,False,False,75-90
+R9,2026-10-14,Wednesday,08:20:00,09:06:00,46,27.0,Car,Sunny,Elmhurst,Elmhurst,Suburb,False,False,45-60
 R10,2026-10-15,Thursday,09:05:00,10:30:00,85,31.0,Train,Cloudy,Aurora,Aurora,Suburb,False,False,75-90
 R11,2026-10-12,Monday,09:33:00,10:34:00,61,27.0,Carpool,Sunny,Hanover Park,Hanover Park,Suburb,False,False,60-75
 R12,2026-10-16,Friday,06:47:00,08:22:00,75,35.0,Train,Cloudy,Naperville,Naperville,Suburb,False,False,75-90
-R13,2026-10-16,Friday,10:22:00,10:49:00,27,13.0,Car (alone),Cloudy,Belmont Cragin,Belmont Cragin,Chicago,False,False,15-30
-R14,2026-10-14,Wednesday,10:45:00,11:19:00,34,16.0,Car (alone),Raining,Bridgeview,Bridgeview,Suburb,True,False,30-45
+R13,2026-10-16,Friday,10:22:00,10:49:00,27,13.0,Car,Cloudy,Belmont Cragin,Belmont Cragin,Chicago,False,False,15-30
+R14,2026-10-14,Wednesday,10:45:00,11:19:00,34,16.0,Car,Raining,Bridgeview,Bridgeview,Suburb,True,False,30-45
 R15,2026-10-14,Wednesday,07:40:00,09:00:00,60,30.0,Train,Raining,Palatine,Palatine,Suburb,True,False,60-75
-R16,2026-10-05,Monday,09:00:00,09:48:00,50,29.0,Car (alone),Sunny,Tinley Park,Tinley Park,Suburb,False,False,45-60
-R17,2026-10-14,Wednesday,09:00:00,10:02:00,62,29.0,Car (alone),Sunny,Tinley Park,Tinley Park,Suburb,False,False,60-75
+R16,2026-10-05,Monday,09:00:00,09:48:00,50,29.0,Car,Sunny,Tinley Park,Tinley Park,Suburb,False,False,45-60
+R17,2026-10-14,Wednesday,09:00:00,10:02:00,62,29.0,Car,Sunny,Tinley Park,Tinley Park,Suburb,False,False,60-75
 R18,2026-10-06,Tuesday,07:00:00,08:45:00,93,29.0,Train,Cloudy,Tinley Park,Tinley Park,Suburb,False,False,90+
 R19,2026-10-16,Friday,10:47:00,00:30:00,103,35.0,Train,Cloudy,Aurora,Aurora,Suburb,False,False,90+
 R20,2026-10-08,Thursday,07:00:00,08:50:00,110,29.0,Train,Sunny,Chicago Ridge,Chicago Ridge,Suburb,False,False,90+
@@ -166,12 +166,12 @@ R164,2026-09-18,Friday,08:01:00,09:00:00,59,22.0,Car,Cloudy,Downers Grove,Downer
 R165,2026-09-21,Monday,08:48:00,09:00:00,12,2.0,Car,Cloudy,near west side,Near West Side,Chicago,False,True,0-15
 R166,2026-09-15,Tuesday,08:49:00,09:00:00,11,2.0,Car,Sunny,near west side,Near West Side,Chicago,False,True,0-15
 R167,2026-09-16,Wednesday,08:36:00,09:00:00,24,2.0,Car,Cloudy,near west side,Near West Side,Chicago,False,True,15-30
-R168,2026-09-18,Thursday,08:49:00,09:00:00,11,2.0,Bicycle,Raining,near west side,Near West Side,Chicago,True,True,0-15
+R168,2026-09-18,Thursday,08:49:00,09:00:00,11,2.0,Bike,Raining,near west side,Near West Side,Chicago,True,True,0-15
 R169,2026-09-18,Friday,07:46:00,08:00:00,14,2.0,Car,Raining,near west side,Near West Side,Chicago,True,True,0-15
-R170,2026-09-15,Tuesday,09:49:00,10:00:00,11,2.0,Bicycle,Cloudy,River North,River North,Chicago,False,True,0-15
-R171,2026-09-16,Wednesday,09:50:00,10:00:00,10,2.0,Bicycle,Cloudy,River North,River North,Chicago,False,True,0-15
-R172,2026-09-17,Thursday,09:51:00,10:00:00,9,2.0,Bicycle,Raining,River North,River North,Chicago,True,True,0-15
-R173,2026-09-18,Friday,09:50:00,10:00:00,10,1.5,Bicycle,Raining,River North,River North,Chicago,True,True,0-15
+R170,2026-09-15,Tuesday,09:49:00,10:00:00,11,2.0,Bike,Cloudy,River North,River North,Chicago,False,True,0-15
+R171,2026-09-16,Wednesday,09:50:00,10:00:00,10,2.0,Bike,Cloudy,River North,River North,Chicago,False,True,0-15
+R172,2026-09-17,Thursday,09:51:00,10:00:00,9,2.0,Bike,Raining,River North,River North,Chicago,True,True,0-15
+R173,2026-09-18,Friday,09:50:00,10:00:00,10,1.5,Bike,Raining,River North,River North,Chicago,True,True,0-15
 R174,2026-09-14,Monday,11:40:00,12:00:00,20,1.5,Walk,Cloudy,city - Chicago,Chicago (unspecified),Chicago,False,True,15-30
 R175,2026-09-15,Tuesday,11:41:00,12:00:00,19,1.5,Walk,Cloudy,city - Chicago,Chicago (unspecified),Chicago,False,True,15-30
 R176,2026-09-16,Wednesday,11:44:00,12:00:00,16,1.5,Walk,Cloudy,city - Chicago,Chicago (unspecified),Chicago,False,True,15-30

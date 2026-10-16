@@ -75,6 +75,38 @@ df["duration_bucket"] = pd.cut(
     labels=["0-15", "15-30", "30-45", "45-60", "60-75", "75-90", "90+"],
     right=False,
 )
+
+
+#some more standardization because of the car mixup and the weather mixups 
+# --- Standardize mode and weather ---
+
+modeMap = {
+    "car (alone)": "Car",
+    "car": "Car",
+    "carpool": "Carpool",
+    "train": "Train",
+    "bus": "Bus",
+    "walk": "Walk",
+    "bicycle": "Bike",
+    "bike": "Bike",
+}
+
+weatherMap = {
+    "sunny": "Sunny",
+    "clear": "Sunny",
+    "cloudy": "Cloudy",
+    "raining": "Raining",
+    "rain": "Raining",
+}
+
+df["mode_of_transportation"] = df["mode_of_transportation"].str.lower().map(modeMap)
+df["weather"] = df["weather"].str.lower().map(weatherMap)
+
+# show anything the maps don't cover yet
+for col in ["mode_of_transportation", "weather"]:
+    if df[col].isna().any():
+        print(f"Unmapped values in {col}: check the map above")
+        
 #this just creates a new file with the cleaned data
 out_dir = root / "data" / "processed"
 out_dir.mkdir(parents=True, exist_ok=True)   # creates the folder if it doesn't exist
