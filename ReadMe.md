@@ -11,4 +11,3 @@ Activating venv: source .venv/bin/activate
 pip install pandas
 
 `datacleaning.py` reads the raw form data from `data/raw/a2_commute_data.csv`, renames the form questions to short column names, drops the timestamp, strips extra spaces, converts dates, times, and numbers to proper types, and standardizes locations using `data/lookups/locations.csv`. The output is saved to `data/processed/commutes_clean.csv`. Use the `location_clean` column for charts. 
-
