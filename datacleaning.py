@@ -58,6 +58,23 @@ if len(missing):
 
 
 
+#addign respondent id labels 
+df.insert(0, "respondent_id", [f"R{i}" for i in range(1, len(df) + 1)])
+
+
+#raining boolean
+df["is_rainy"] = df["weather"].str.lower().isin(["raining", "rain", "storm",])
+
+#near uic column: 
+df["near_uic"] = df["distance_miles"] <= 5
+
+#duration buckets: 
+df["duration_bucket"] = pd.cut(
+    df["duration_minutes"],
+    bins=[0, 15, 30, 45, 60, 75, 90, float("inf")],
+    labels=["0-15", "15-30", "30-45", "45-60", "60-75", "75-90", "90+"],
+    right=False,
+)
 #this just creates a new file with the cleaned data
 out_dir = root / "data" / "processed"
 out_dir.mkdir(parents=True, exist_ok=True)   # creates the folder if it doesn't exist
