@@ -11,10 +11,10 @@ To address these problems, we rebuilt the Google Form midway through collection.
 
 For this assignment, our goal is to understand the shape and limitations of our newly cleaned dataset while building working visualizations and before building our final visualizations. We will use the following data-exploration questions to guide our work in Task 3:
 
-What does the majority of people use to commute?
-What time windows have the highest volume of commuters?
-Are there specific days where commute times spike?
-Which data points (weather, distance, transport mode) show the most interaction with each other?
-How many observations did we lose or gain by switching to the new form format?
+1. What does the majority of people use to commute?
+2. What time windows have the highest volume of commuters?
+3. Are there specific days where commute times spike?
+4. Which data points (weather, distance, transport mode) show the most interaction with each other?
+5. How many observations did we lose or gain by switching to the new form format?
 
 These guiding questions will help us determine which of our domain questions from Assignment 1 are actually supported by the data before we commit to our final visual designs.
