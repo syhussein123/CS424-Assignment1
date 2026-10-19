@@ -44,7 +44,7 @@ All data cleaning code is located in the `datacleaning.py` file. This file reads
 
 ### Commute Duration by Mode of Transportation
 
-![Commute duration by mode](figures/task4_mode_duration.png)
+![Commute duration by mode](figures/task4_commute_duration_by_mode.png)
 
 This figure aims to answer the two following questions that we had:
 
