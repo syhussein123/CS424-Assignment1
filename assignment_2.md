@@ -176,6 +176,12 @@ We will likely abandon this graph for our final visualizations. While it was hel
 
 ## Task 5 : Interaction and multiple views
 
+We paired a heatmap with a scatterplot because they answer different levels of the same question: how does weather relate to commute time? The heatmap summarizes how many commutes fall into each combination of weather condition and duration bucket. The scatterplot shows the individual trips behind those counts, plotting distance against duration and coloring by mode of transportation.
+
+The two views are linked by click selection. Clicking a heatmap cell highlights the matching trips in the scatterplot and fades the rest, and shift-clicking selects several cells. This supports a specific task: when a viewer notices a pattern in the summary, such as a cluster of long commutes on rainy days, they can check whether those trips are explained by distance or by mode of transportation. The heatmap is the overview and the scatterplot is details-on-demand, which is why the views belong together rather than being a dashboard of unrelated charts. Hovering over a point also shows exact values (day of week, mode, distance, duration).
+
+We deliberately did not add a weather dropdown. Weather is already encoded on the heatmap’s x-axis, so filtering by it would remove the very comparison the chart is meant to support. We also did not add zooming or panning, since the dataset is small enough that every point is readable in the full view.
+
 ## Task 6 : Iterate and refine
 
 ## Task 7 : Current Design
