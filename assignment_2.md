@@ -36,6 +36,16 @@ All data cleaning code is located in the `datacleaning.py` file. This file reads
   - `near_uic`: whether the commute started within 5 miles of campus, to separate local commuters from long-distance ones
   - `duration_bucket`: 15-minute ranges matching our Assignment 1 sketches, for grouped charts
 
+**Things to consider in Assignment 3**
+
+Data inconsistencies due to user error, examples include:
+
+- Submitting 12:30AM instead of PM
+- Mileage not aligning with the cities they select
+- Misclicking mode of transportions
+- People estimating their time rather than adding exact time, which creates buckets on accident
+- Other forms of user error
+
 ## Task 3 : Explore the data
 
 [view](task3.ipynb)
@@ -76,7 +86,6 @@ Some things that didn't work include: Biking data only having a couple commutes,
 
 **Whether we will keep, modify, combine, or abandon**:
 It would be a good idea to modify this graph in the future. It is a strong direction in answering our domain question, but trying a version that displays counts or maybe shows the data in a way that reveals something else may benefit us.
-
 
 ### Weather vs. Commute Duration (Heatmap)
 
@@ -148,6 +157,7 @@ What worked well is that it clearly shows the strong positive correlation betwee
 We will definitely keep this graph. For Task 5, we implemented this scatterplot side-by-side with the heatmap and added an interactive filter. It is a very strong analytical tool. If we were to modify it, we might add a slight transparency to the dots (opacity) or jitter them to solve the overplotting issue in the dense areas.
 
 ## Total Commutes by Day of the Week (Pie Chart)
+
 ![TotalCommuteByDayOfWeek](figures/task4_totalCommutePie.png)
 This figure aims to answer the following question:
 Is there a day when the commute takes longer compared to the rest of the week? (Specifically, looking at attendance volume as a proxy for campus activity).
@@ -183,5 +193,21 @@ The two views are linked by click selection. Clicking a heatmap cell highlights 
 We deliberately did not add a weather dropdown. Weather is already encoded on the heatmap’s x-axis, so filtering by it would remove the very comparison the chart is meant to support. We also did not add zooming or panning, since the dataset is small enough that every point is readable in the full view.
 
 ## Task 6 : Iterate and refine
+
+We chose our coordinated scatterplot and heatmap as our strongest direction to refine. Through iteration, we transitioned from a technically fragile and conceptually redundant filter to a seamless overview-to-detail interaction.
+
+### Iteration 1: Pivoting from Plotly to Vega-Lite
+
+Problem noticed: We originally attempted to build our interactive dashboard in Plotly using make_subplots and a dropdown filter. However, Plotly required us to write complex trace-visibility logic to make a single dropdown filter two charts at once, making the code bloated and prone to breaking.
+What we changed: We pivoted to Vega-Lite (via Altair), which is explicitly designed for coordinated multi-view filtering using selection parameters.
+Why: This reduced our code significantly and created a much more reliable, seamless link between the scatterplot and the heatmap.
+
+<iframe src="./figures/task5_commute_duration_by_mode_plotly.html" width="100%" height="620" style="border:none;"></iframe>
+
+### Iteration 2: From Dropdown Filter to Click-to-Explore
+
+Problem noticed: Our first interactive version in Vega-Lite used a weather dropdown to filter both charts. It had a technical bug (the "All" option grayed out every point because "All" was not an actual value in the weather column, so the selection matched nothing). More importantly, fixing the bug made us look harder at the design itself. We realized the dropdown was conceptually redundant: the heatmap already shows every weather type, so filtering collapsed it to a single column and destroyed the comparison. It also forced viewers to hold the selected weather in their memory while reading both charts.
+What we changed: We removed the dropdown entirely and made the heatmap cells clickable. Selecting a cell (e.g., the intersection of "Raining" and "45-60 mins") now highlights the individual trips that make up that cell in the scatterplot.
+Why: This transforms the heatmap into an overview and the scatterplot into details-on-demand. The two views now have a clear reason to exist together, and the interaction supports a real domain question: "Which specific trips (and transport modes) make up this aggregate pattern?"
 
 ## Task 7 : Current Design
