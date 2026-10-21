@@ -202,12 +202,16 @@ Problem noticed: We originally attempted to build our interactive dashboard in P
 What we changed: We pivoted to Vega-Lite (via Altair), which is explicitly designed for coordinated multi-view filtering using selection parameters.
 Why: This reduced our code significantly and created a much more reliable, seamless link between the scatterplot and the heatmap.
 
-<iframe src="./figures/task5_commute_duration_by_mode_plotly.html" width="100%" height="620" style="border:none;"></iframe>
+Below is the static png file of the iteration we are referring to, you can view the interactive html by running figures/task5_commute_duration_by_mode_plotly.html in browser.
+![Commute Static](figures/task5_plotly_static.png)
 
 ### Iteration 2: From Dropdown Filter to Click-to-Explore
 
 Problem noticed: Our first interactive version in Vega-Lite used a weather dropdown to filter both charts. It had a technical bug (the "All" option grayed out every point because "All" was not an actual value in the weather column, so the selection matched nothing). More importantly, fixing the bug made us look harder at the design itself. We realized the dropdown was conceptually redundant: the heatmap already shows every weather type, so filtering collapsed it to a single column and destroyed the comparison. It also forced viewers to hold the selected weather in their memory while reading both charts.
 What we changed: We removed the dropdown entirely and made the heatmap cells clickable. Selecting a cell (e.g., the intersection of "Raining" and "45-60 mins") now highlights the individual trips that make up that cell in the scatterplot.
 Why: This transforms the heatmap into an overview and the scatterplot into details-on-demand. The two views now have a clear reason to exist together, and the interaction supports a real domain question: "Which specific trips (and transport modes) make up this aggregate pattern?"
+
+Below is the static png file of the iteration we are referring to, you can view the interactive html by running figures/task5_commute_duration_by_mode_plotly.html in browser.
+![Vega Static](figures/task5_vega_static.png)
 
 ## Task 7 : Current Design
