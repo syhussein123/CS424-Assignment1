@@ -194,24 +194,36 @@ We deliberately did not add a weather dropdown. Weather is already encoded on th
 
 ## Task 6 : Iterate and refine
 
-We chose our coordinated scatterplot and heatmap as our strongest direction to refine. Through iteration, we transitioned from a technically fragile and conceptually redundant filter to a seamless overview-to-detail interaction.
+In the end, we chose our coordinated scatterplot and heatmap as our strongest direction to refine. The scatterplot shows individual trips (distance vs. commute time, colored by transportation mode), and the heatmap shows an aggregate view (weather vs. commute duration, colored by number of commutes). Together, they address two of our domain questions: what drives longer commutes, and whether weather affects commute time. Through iteration, we moved from a single-question chart, to linked views with a dropdown filter, to an overview-to-detail interaction where each view has a clear role.
 
-### Iteration 1: Pivoting from Plotly to Vega-Lite
+### Starting Point: Commute Duration by Mode (Plotly)
 
-Problem noticed: We originally attempted to build our interactive dashboard in Plotly using make_subplots and a dropdown filter. However, Plotly required us to write complex trace-visibility logic to make a single dropdown filter two charts at once, making the code bloated and prone to breaking.
-What we changed: We pivoted to Vega-Lite (via Altair), which is explicitly designed for coordinated multi-view filtering using selection parameters.
-Why: This reduced our code significantly and created a much more reliable, seamless link between the scatterplot and the heatmap.
+Our first version was an interactive Plotly line chart showing how commute time varies by transportation mode. Commute times were grouped into 5-minute windows, and each mode was drawn as its own line showing the number of commutes in each window. Modes with too few commutes to form a meaningful line (Bike and Carpool) were shown as individual dots instead. Hovering over any point shows a pop-up with the transportation mode, the commute time window, and the number of commutes, so exact values are available without labeling every point.
 
-Below is the static png file of the iteration we are referring to, you can view the interactive html by running figures/task5_commute_duration_by_mode_plotly.html in browser.
+Below is the static png of this version. The interactive version can be viewed by opening `figures/task5_commute_duration_by_mode_plotly.html` in a browser.
+
 ![Commute Static](figures/task5_plotly_static.png)
+
+### Iteration 1: From a Single Chart to Linked Views (Vega-Lite)
+
+**Problem noticed:** This chart only answers one question: how commute time differs by mode. It cannot show distance or weather, which are central to our domain questions about what causes longer commutes. Because commutes are counted into time windows, individual trips are also hidden. A viewer can see that 16 train commutes took 70-75 minutes, but not how far those people traveled or what the weather was. Raw counts also made Train and Car stand out simply because they had the most observations.
+
+**What we changed:** We pivoted to Vega-Lite (via Altair), which is explicitly designed for coordinated multi-view filtering using selection parameters. We built two linked views: a heatmap of weather against commute-time buckets, and a scatterplot of every individual trip with distance on the x-axis and commute time on the y-axis, colored by transportation mode. A weather dropdown filtered both charts at once.
+
+**Why:** The scatterplot brings back individual trips and adds distance, and the heatmap adds weather, so together they cover the attributes the Plotly chart could not show. Vega-Lite's selection parameters let one control update both views without writing custom linking logic.
+
+[Add the screenshot of the dropdown version here]
 
 ### Iteration 2: From Dropdown Filter to Click-to-Explore
 
-Problem noticed: Our first interactive version in Vega-Lite used a weather dropdown to filter both charts. It had a technical bug (the "All" option grayed out every point because "All" was not an actual value in the weather column, so the selection matched nothing). More importantly, fixing the bug made us look harder at the design itself. We realized the dropdown was conceptually redundant: the heatmap already shows every weather type, so filtering collapsed it to a single column and destroyed the comparison. It also forced viewers to hold the selected weather in their memory while reading both charts.
-What we changed: We removed the dropdown entirely and made the heatmap cells clickable. Selecting a cell (e.g., the intersection of "Raining" and "45-60 mins") now highlights the individual trips that make up that cell in the scatterplot.
-Why: This transforms the heatmap into an overview and the scatterplot into details-on-demand. The two views now have a clear reason to exist together, and the interaction supports a real domain question: "Which specific trips (and transport modes) make up this aggregate pattern?"
+**Problem noticed:** The weather dropdown had a technical bug (the "All" option grayed out every point because "All" was not an actual value in the weather column, so the selection matched nothing). More importantly, fixing the bug made us look harder at the design itself. We realized the dropdown was conceptually redundant: the heatmap already shows every weather type, so filtering collapsed it to a single column and destroyed the comparison. It also forced viewers to hold the selected weather in their memory while reading both charts.
 
-Below is the static png file of the iteration we are referring to, you can view the interactive html by running figures/task5_commute_duration_by_mode_plotly.html in browser.
+**What we changed:** We removed the dropdown and made the heatmap cells clickable. Clicking a heatmap cell highlights the trips in that cell on the scatterplot, colored by transportation mode, while all other trips fade to light gray. Shift-clicking selects several cells at once, and hovering over a trip shows its day, mode, weather, duration, and distance.
+
+**Why:** This transforms the heatmap into an overview and the scatterplot into details-on-demand. The two views now have a clear reason to exist together, and the interaction supports a real domain question: "Which specific trips (and transport modes) make up this aggregate pattern?"
+
+Below is the static png of this version. The interactive version can be viewed by opening `figures/task5_dashboard.html` in a browser.
+
 ![Vega Static](figures/task5_vega_static.png)
 
 ## Task 7 : Current Design
